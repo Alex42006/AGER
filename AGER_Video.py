@@ -38,7 +38,7 @@ while True:
             current_center = (x2-x1 + 100, y2-y1 + 100)
             flag = False
         
-        if abs(current_center[0] - (x2 - x1)) <= ((x2 - x1)+(y2 - y1))/48 and abs(current_center[1] - (y2 - y1)) <= ((x2 - x1)+(y2 - y1))/48:
+        if abs(current_center[0] - (x2 - x1)) <= ((x2 - x1)+(y2 - y1))/30 and abs(current_center[1] - (y2 - y1)) <= ((x2 - x1)+(y2 - y1))/30:
             for face_bound in face_bounds:
                 try:
                     cv2.putText(frame_copy, f'{age}, {gender}, {emotion}, {race}', (face_bound[0], face_bound[1]-10), cv2.FONT_HERSHEY_COMPLEX, 1,(255,0,255),4,cv2.LINE_AA)
